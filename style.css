@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito&display=swap');
+
+/* || RESET */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+input,
+button,
+textarea {
+    font: inherit;
+}
+
+/* || VARIABLES */
+:root {
+    --FF: 'Nunito', sans-serif;
+    --FF-HEAD: 'Fugaz One', cursive;
+    --FS: clamp(1rem, 2.2vh, 1.5rem);
+
+    --BGCOLOR: #1e1e2f;
+    --BGCOLOR-FADE: #2b2b3c;
+    --BODY-BGCOLOR: #121212;
+    --FONT-COLOR: #e0e0e0;
+    --BORDER-COLOR: #444;
+    --BUTTON-COLOR: #1e1e2f;
+    --HEADER-BGCOLOR: #0f0f1a;
+    --HEADER-COLOR: #e0e0e0;
+    --HIGHLIGHT-COLOR: #4fc3f7;
+    --LINK-COLOR: #b3e5fc;
+    --LINK-HOVER: #81d4fa;
+    --LINK-ACTIVE: #29b6f6;
+
+    --BORDERS: 1px solid var(--BORDER-COLOR);
+    --BORDER-RADIUS: 10px;
+    --MARGIN: clamp(1em, 2.5vh, 1.5em) 0;
+    --PADDING-TB: 0.5em;
+    --PADDING-SIDE: 1em;
+}
+
+body {
+    font-family: var(--FF);
+    font-size: var(--FS);
+    background: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
+    color: var(--FONT-COLOR);
+    max-width: 800px;
+    margin: auto;
+    background-color: var(--BODY-BGCOLOR);
+    border-left: var(--BORDERS);
+    border-right: var(--BORDERS);
+    box-shadow: 0 0 10px var(--BORDER-COLOR);
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-family: var(--FF-HEAD);
+    color: var(--HIGHLIGHT-COLOR);
+    margin-bottom: 0.5em;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+header {
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #1f1f2e;
+    padding: var(--PADDING-TB);
+    border-bottom: var(--BORDERS);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--LINK-COLOR);
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--LINK-HOVER);
+}
+
+nav a:active {
+    color: var(--LINK-ACTIVE);
+}
+
+main {
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+}
+
+article, section {
+    margin: var(--MARGIN);
+}
+
+figure {
+    margin: 1em auto;
+    text-align: center;
+    max-width: 100%;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+}
+
+th, td {
+    padding: 0.5em;
+    border: 1px solid var(--BORDER-COLOR);
+    text-align: center;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+footer {
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    text-align: center;
+    padding: var(--PADDING-TB);
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+form {
+    display: grid;
+    gap: 1em;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.25em;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 2px solid var(--BORDER-COLOR);
+    border-radius: var(--BORDER-RADIUS);
+    background-color: #1e1e2f;
+    color: var(--FONT-COLOR);
+}
+
+button {
+    background-color: var(--HIGHLIGHT-COLOR);
+    color: var(--BUTTON-COLOR);
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: var(--BORDER-RADIUS);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+address {
+    font-style: normal;
+    line-height: 1.5;
+    margin-top: 1em;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --BODY-BGCOLOR: #121212;
+        --FONT-COLOR: #eee;
+        --HEADER-COLOR: #fff;
+        --LINK-COLOR: #eee;
+        --BORDER-COLOR: #666;
+        --BUTTON-COLOR: #121212;
+    }
+
+    nav ul {
+        background-color: #1c1c2b;
+    }
+
+    footer {
+        background-color: #0f0f1a;
+    }
+}
